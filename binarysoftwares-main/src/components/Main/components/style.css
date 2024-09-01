@@ -1,0 +1,138 @@
+.login_pop_main {
+    background: linear-gradient(#ffff, #dedede);
+    background-size: cover;
+    background-position: center;
+    /* background-image: url('./assets/bg_log_pop.png'); */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    /* (#141e30, #243b55) */
+}
+
+dialog {
+    width: 300px;
+    height: auto;
+    background-color: #000;
+    color: #999;
+    border: 0;
+    border-radius: 10px;
+    animation: move-in 0.3s;
+    box-shadow: 0 0.5 1rem rgba(0, 0, 0, 0.5);
+}
+
+.center-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* dialog h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 600;
+} */
+
+dialog p {
+    font-size: 0.75rem;
+}
+
+dialog h5 {
+    text-align: center;
+    margin: 0px;
+}
+
+dialog .login_now {
+    border-radius: 4px;
+	border: 1px solid #000;
+	background-color: #fff;
+	color: #000;
+	font-size: 12px;
+	font-weight: bold;
+    padding: 10px 20px;
+    text-transform: none;
+    justify-content: center;
+}
+
+dialog .login_now span {
+    color: red;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+dialog::backdrop {
+    background-color: rgba(46, 50, 82, 0.7);
+    animation: fade-in 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+    from {
+        backdrop-filter: blur(0px);
+    }
+
+    to {
+        backdrop-filter: blur(8px);
+    }
+}
+
+@keyframes move-in {
+    from {
+        translate: 0 10px;
+        opacity: 0;
+    }
+
+    to {
+        translate: 0;
+        opacity: 1;
+    }
+}
+
+footer {
+    display: flex;
+    padding-top: 5px;
+    justify-content: center;
+}
+
+
+/* TAB Switcher CSS [Codebeany]*/
+.active_tab {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.inactive_tab {
+    display: block;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, height 0s 0.3s;
+}
+
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media (min-width: 320px) and (max-width: 719px) {
+    .iframe-container {
+        height: 100vh;
+    }
+}
